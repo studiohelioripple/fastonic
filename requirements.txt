@@ -1,3 +1,7 @@
 fastapi[standard]
 uvicorn
 gunicorn
+sqlalchemy
+pymysql
+email-validator
+

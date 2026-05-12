@@ -1,6 +1,17 @@
 from fastapi import FastAPI
 
-app = FastAPI()
+from db import init_db
+from routes import router
+
+app = FastAPI(
+    title="ParsPack FastAPI Example",
+    version="1.0.0"
+)
+
+
+# init_db()
+# app.include_router(router)
+
 
 # Root endpoint
 @app.get("/")
@@ -12,5 +23,4 @@ def read_root():
 def read_item(item_id: int):
     return {
         "item_id": item_id,
-     
     }
