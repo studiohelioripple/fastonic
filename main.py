@@ -18,6 +18,14 @@ app = FastAPI(
 def read_root():
     return {"message": "Hello from FastAPI"}
 
+
+
+@app.get("/ragor")
+def read_ragor():
+    print(settings.database_url )
+    return {"message":"metous" }
+
 @app.get("/config")
 def read_conf():
     return {"config":settings.database_url }
+
