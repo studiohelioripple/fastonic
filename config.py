@@ -2,18 +2,16 @@ import os
 
 
 class Settings:
-    MYSQL_HOST = os.getenv("MYSQL_HOST", "localhost")
-    MYSQL_PORT = os.getenv("MYSQL_PORT", "3306")
-    MYSQL_USER = os.getenv("MYSQL_USER", "root")
-    MYSQL_PASSWORD = os.getenv("MYSQL_PASSWORD", "up5FHoQOtbWjN88_F0r=")
-    MYSQL_DB = os.getenv("MYSQL_DB", "bless")
-
-    @property
+    DB_HOST = os.getenv("DB_HOST", "localhost")
+    DB_PORT = os.getenv("DB_PORT", "5432")
+    DB_USER = os.getenv("DB_USER", "username")
+    DB_PASSWORD = os.getenv("DB_NAMEL_PASSWORD", "fQnyLZSu2-KhV!c0=6am")
+    DB_NAME = os.getenv("DB_NAME", "reigor")
     def database_url(self):
         return (
-            f"mysql+pymysql://{self.MYSQL_USER}:{self.MYSQL_PASSWORD}"
-            f"@{self.MYSQL_HOST}:{self.MYSQL_PORT}/{self.MYSQL_DB}"
-        )
+    f"postgresql+psycopg2://{self.DB_USER}:{self.DB_PASSWORD}"
+    f"@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}"
+    )
 
 
 settings = Settings()
