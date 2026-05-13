@@ -5,8 +5,8 @@ class Settings:
     MYSQL_HOST = os.getenv("MYSQL_HOST", "localhost")
     MYSQL_PORT = os.getenv("MYSQL_PORT", "3306")
     MYSQL_USER = os.getenv("MYSQL_USER", "root")
-    MYSQL_PASSWORD = os.getenv("MYSQL_PASSWORD", "")
-    MYSQL_DB = os.getenv("MYSQL_DB", "testdb")
+    MYSQL_PASSWORD = os.getenv("MYSQL_PASSWORD", "up5FHoQOtbWjN88_F0r=")
+    MYSQL_DB = os.getenv("MYSQL_DB", "bless")
 
     @property
     def database_url(self):
