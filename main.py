@@ -19,5 +19,5 @@ def read_root():
     return {"message": "Hello from FastAPI"}
 
 @app.get("/config")
-def read_root():
+def read_conf():
     return {"config":settings.database_url }
